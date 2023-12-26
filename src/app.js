@@ -1,11 +1,11 @@
 // ---- DEPENDENCIAS -----
-import expres from 'express';
+import express from 'express';
 import handlebars from  'express-handlebars';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
 import passport from 'passport';
 import swaggerUI from 'swagger-ui-express';
-import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerJsDoc from 'swagger-jsdoc';
 import { __dirname } from './utils.js';
 import configEnv from './config/env.config.js';
 import './config/db.js';
@@ -57,7 +57,6 @@ app.use("/api/users", userRouter);
 app.use("/api/products", productRoutes)
 app.use("/api/carts", cartRoutes);  
 app.use("/api/ticket", ticketRouter);
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 // ---- SWAGGER -----
 const swaggerOptions = {
@@ -71,6 +70,9 @@ const swaggerOptions = {
     apis: ["./src/docs/**/*.yml"]
 };
 const specs = swaggerJsDoc(swaggerOptions);
+
+// ---- ROUTERS SWAGGER -----
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 // ---- SERVER -----
 const PORT = process.env.PORT  || 8080 ;

@@ -1,0 +1,680 @@
+{
+	"info": {
+		"_postman_id": "1a7a2109-bfbe-44d2-a435-449a52da813c",
+		"name": "CoderHouse  - Backend APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21331384",
+		"_collection_link": "https://universal-star-651452.postman.co/workspace/Proyectos~adcf3fa1-bb82-4bdb-9191-89f6ba377ab3/collection/21331384-1a7a2109-bfbe-44d2-a435-449a52da813c?action=share&source=collection_link&creator=21331384"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/users/allUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"allUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/users/findOne/658a209ce19a5f491e810447",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"findOne",
+								"658a209ce19a5f491e810447"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inactive",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/users/inactiveUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"inactiveUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"ejemplo30\",\r\n    \"last_name\": \"ejemplo30\",\r\n    \"email\": \"mail30@mail.com\",\r\n    \"age\": 1,\r\n    \"password\": \"123qwe\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"Leandro Matias\",\r\n  \"last_name\": \"Vildoza\",\r\n  \"email\": \"leandrovildoza@gmail.com\",\r\n  \"age\": 40,\r\n  \"role\":\"Admin\",\r\n  \"last_conection\":\"\",\r\n  \"documents\":\"\"\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/users/update/658614287d72791e61212f40",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"update",
+								"658614287d72791e61212f40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/users/deleteOne/64f8fd6ad888f4f6fb9382c2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"deleteOne",
+								"64f8fd6ad888f4f6fb9382c2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mail30@mail.com\",\r\n    \"password\": \"123qwe\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "img profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "Users/Usuario/OneDrive/Imágenes/Capturas de pantalla/Captura de pantalla 2023-12-07 155807.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/users/uploadAvatar/0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"uploadAvatar",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add DU",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "du",
+									"type": "file",
+									"src": "Users/Usuario/OneDrive/Imágenes/Capturas de pantalla/Captura de pantalla 2023-12-07 162047.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/users/uploadDocs/du/0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"uploadDocs",
+								"du",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add EC",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ec",
+									"type": "file",
+									"src": "Users/Usuario/OneDrive/Imágenes/Capturas de pantalla/Captura de pantalla 2023-12-07 162047.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/users/uploadDocs/ec/0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"uploadDocs",
+								"ec",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add CD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cd",
+									"type": "file",
+									"src": "Users/Usuario/OneDrive/Imágenes/Capturas de pantalla/Captura de pantalla 2023-12-07 162047.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/users/uploadDocs/cd/0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"uploadDocs",
+								"cd",
+								"0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Clean Cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/carts/2/clean",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"carts",
+								"2",
+								"clean"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/carts/deleteCart/6568cd5e44abcff73fb1c645",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"carts",
+								"deleteCart",
+								"6568cd5e44abcff73fb1c645"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Del prod from cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/carts/2/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"carts",
+								"2",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put prod into cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/carts/65275aea98c208cf5a6690fe/products/add/64f017f75d2d6ec97df7f85a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"carts",
+								"65275aea98c208cf5a6690fe",
+								"products",
+								"add",
+								"64f017f75d2d6ec97df7f85a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creat Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"1243\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cart by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/carts/search/658a2440e19a5f491e8104ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"carts",
+								"search",
+								"658a2440e19a5f491e8104ab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "All product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/products/findOne/658b35b7caf91e55cfa3ab4a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"products",
+								"findOne",
+								"658b35b7caf91e55cfa3ab4a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"yerba\",\r\n    \"description\": \"terba buena\",\r\n    \"price\": 2000,\r\n    \"thumbnail\": \"yerba.com\",\r\n    \"code\": \"prodalmacen\",\r\n    \"stock\": 34,\r\n    \"available\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/products/createOne",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"products",
+								"createOne"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Zapatos Deportivos\",\r\n  \"description\": \"Zapatos deportivos para correr\",\r\n  \"price\": 8500,\r\n  \"status\": true,\r\n  \"thumbnail\": \"http://www.zapatosdeportivos.com\",\r\n  \"code\": \"ZD850CP4\",\r\n  \"stock\": 30,\r\n  \"available\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/products/updateOne/64f017f75d2d6ec97df7f858",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"products",
+								"updateOne",
+								"64f017f75d2d6ec97df7f858"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tickets",
+			"item": [
+				{
+					"name": "Get ticket by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/ticket/658607bfe9c36a742b4c8ae6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"ticket",
+								"658607bfe9c36a742b4c8ae6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
