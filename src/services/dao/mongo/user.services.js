@@ -5,8 +5,8 @@ import { isValidPassword } from '../../../utils.js';
 import { generateToken } from '../../../utils.js';
 import envConfig from '../../../config/env.config.js';
 import CartServices from "./cart.services.js";
-import UserDto from "../Dto/user.dto.js";
-import UserUpdt from "../Dto/userUpdt.dto.js";
+import UserDto from "../dto/user.dto.js";
+import UserUpdt from "../dto/userUpdt.dto.js";
 import { transporter } from "../../../utils.js";
 
 const cartServices = new CartServices();
