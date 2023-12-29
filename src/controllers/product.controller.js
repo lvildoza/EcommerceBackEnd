@@ -1,5 +1,5 @@
 import { productService } from "../services/factory.js";
-import CustomError from "../services/errors/CustomError.js";
+import CustomError from "../services/errors/customError.js";
 import EErrors from "../services/errors/errors.enum.js";
 import {generateProductErrorInfo} from "../services/errors/messages/product-creation-error.message.js";
 
